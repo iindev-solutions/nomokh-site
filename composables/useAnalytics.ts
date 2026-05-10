@@ -12,7 +12,8 @@ export function enableAnalytics() {
     const a = e.getElementsByTagName(t)[0]
     k.async = true
     k.src = r
-    a.parentNode?.insertBefore(k, a)
+    if (a?.parentNode) a.parentNode.insertBefore(k, a)
+    else e.head.appendChild(k)
   })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym')
   const ym = window.ym as ((...args: any[]) => void) | undefined
   ym?.(Number(counterId), 'init', { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: false })

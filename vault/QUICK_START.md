@@ -11,7 +11,7 @@ Legend (nomokh) made steel. Yakut knife e-commerce + future auction.
 
 ## Stack
 
-- Frontend: Nuxt 3 + Vue 3 + Composition API `<script setup lang="ts">` + GSAP + Pinia + Tailwind.
+- Frontend: Nuxt 4.4.4 + Vue 3 + Composition API `<script setup lang="ts">` + GSAP + Pinia + Tailwind.
 - Backend: Nuxt Nitro server API + optional worker for 1C sync. Node 20+.
 - Database: PostgreSQL 15 + Redis (sessions, cache, rate limits).
 - Tests: Vitest (unit), Playwright (e2e).
@@ -26,15 +26,15 @@ Legend (nomokh) made steel. Yakut knife e-commerce + future auction.
 - Prod deploy improved: `docker-compose.prod.yml` + Caddy TLS; DB/Redis not public.
 - Legal scaffold: `/privacy` + `/offer`; lawyer review still required.
 - Brand/UI pass done: premium dark tokens, hero, product card, PDP provenance/trust/care, cart/checkout trust copy.
+- Nuxt 4 migration done: lock/build on `4.4.4`; `@nuxt/image` 2; analytics DOM typing fixed.
 
 ## Next Best Tasks
 
-1. Resolve `package.json` vs `pnpm-lock.yaml` Nuxt version drift.
-2. Run DB-backed smoke using `docs/SMOKE_CHECKLIST.md`.
-3. Add integration tests for auth/cart/order/payment webhook.
-4. Replace legal templates with lawyer-approved privacy/offer/requisites.
-5. Decide guest checkout vs required login.
-6. Decide auction scope for v2 vs current demo routes.
+1. Run DB-backed smoke using `docs/SMOKE_CHECKLIST.md`.
+2. Add integration tests for auth/cart/order/payment webhook.
+3. Replace legal templates with lawyer-approved privacy/offer/requisites.
+4. Decide guest checkout vs required login.
+5. Decide auction scope for v2 vs current demo routes.
 
 ## Read Deep Docs Only If Needed
 

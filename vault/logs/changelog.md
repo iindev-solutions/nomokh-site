@@ -14,7 +14,7 @@ Use compact entries:
 
 - Changed: Populated vault docs (product, frontend, backend, api, data-model, security, deployment, code-map, quick-start) for NOMOKH knife e-commerce + auction project.
 - Verified: User requirements captured (1C import, Vue/Nuxt, GSAP, RF legal, auction v2).
-- Next: Initialize repo, install Nuxt 3 + Prisma + Tailwind, create first migration, build catalog vertical slice.
+- Next: Initialize repo, install Nuxt + Prisma + Tailwind, create first migration, build catalog vertical slice.
 
 ## 2026-05-09 — Vault State Correction
 
@@ -59,5 +59,12 @@ Use compact entries:
 
 - Changed: Applied NOMOKH premium dark tokens, hero/card/PDP/checkout trust copy, reduced-motion guard, brand contract test.
 - Verified: `corepack pnpm test` 14 pass, `corepack pnpm typecheck`, `corepack pnpm build` pass.
-- Found: `package.json` says Nuxt `^4.4.4`; lock/build use Nuxt `3.19.0`.
+- Found: Dependency drift before Nuxt 4 migration.
 - Next: Resolve Nuxt version drift; DB-backed smoke.
+
+## 2026-05-10 — Nuxt 4 Migration
+
+- Changed: Migrated deps/lock to Nuxt `4.4.4`, `@nuxt/image` `2.0.0`, Tailwind module `6.14.0`, `h3` `1.15.11`.
+- Changed: Fixed analytics script insert typing exposed by Nuxt 4 typecheck.
+- Verified: `corepack pnpm install --frozen-lockfile`, `corepack pnpm test` 14 pass, `corepack pnpm typecheck`, `corepack pnpm build` pass; build prints Nuxt `4.4.4`.
+- Next: DB-backed smoke.

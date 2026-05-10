@@ -2,10 +2,10 @@
 
 ## Stack
 
-- Nuxt 3 (SSR/SSG hybrid) — `nuxt.config.ts` with `ssr: true`, route rules for static pages.
+- Nuxt 4.4.4 (SSR/SSG hybrid) — `nuxt.config.ts` with `ssr: true`, route rules for static pages.
 - Vue 3 + Composition API + `<script setup lang="ts">`.
 - Pinia for global state (cart, auth, filters).
-- Tailwind CSS + custom design tokens (colors: steel, forge-orange, obsidian).
+- Tailwind CSS + premium dark tokens (obsidian, graphite, bone, brass, silver, moss).
 - GSAP (ScrollTrigger, Flip) for hero + transitions.
 - Nuxt Image for responsive/lazy images.
 - @nuxtjs/i18n — deferred, only Russian now.
