@@ -1,0 +1,15 @@
+{$SITE_DOMAIN} {
+  encode gzip zstd
+
+  request_body {
+    max_size 20MB
+  }
+
+  header {
+    X-Frame-Options "SAMEORIGIN"
+    X-Content-Type-Options "nosniff"
+    Referrer-Policy "strict-origin-when-cross-origin"
+  }
+
+  reverse_proxy web:3000
+}

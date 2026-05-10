@@ -19,15 +19,20 @@ Legend (nomokh) made steel. Yakut knife e-commerce + future auction.
 
 ## Current State
 
-- Planning phase. Vault docs populated. No code yet.
+- MVP scaffold + first audit fix pass done.
+- Security improved: webhook verify boundary, prod secret fail-fast, OTP verify limits, no access token localStorage.
+- Integrity improved: stock checks, checkout repricing, safer order/payment flow, cancel restores stock.
+- Hygiene improved: lockfile, patched deps, typecheck script, Docker Prisma generate, duplicate component removed.
+- Prod deploy improved: `docker-compose.prod.yml` + Caddy TLS; DB/Redis not public.
+- Legal scaffold: `/privacy` + `/offer`; lawyer review still required.
 
 ## Next Best Tasks
 
-1. Lock stack versions, init monorepo or single repo (`apps/web` + `apps/worker`).
-2. Design DB schema, migrate with Prisma ORM.
-3. Build vertical slice: category list → product card → cart → checkout stub.
-4. Add CommerceML 2 import job for 1C sync.
-5. Auth by phone OTP (SMS.ru or WhatsApp Business API).
+1. Run DB-backed smoke using `docs/SMOKE_CHECKLIST.md`.
+2. Add integration tests for auth/cart/order/payment webhook.
+3. Replace legal templates with lawyer-approved privacy/offer/requisites.
+4. Decide guest checkout vs required login.
+5. Decide auction scope for v2 vs current demo routes.
 
 ## Read Deep Docs Only If Needed
 

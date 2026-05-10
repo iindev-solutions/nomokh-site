@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; background: #0B0B0C; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(217, 121, 37, .16), transparent 32rem),
+    linear-gradient(180deg, #0B0B0C 0%, #151516 46%, #0B0B0C 100%);
+  color: #FFF8EA;
+}
+.text-balance { text-wrap: balance; }
+.container-page { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+.btn-primary { @apply inline-flex items-center justify-center rounded-full bg-forge px-6 py-3 text-sm font-semibold text-obsidian transition hover:bg-forge-soft focus:outline-none focus:ring-2 focus:ring-forge-soft focus:ring-offset-2 focus:ring-offset-obsidian disabled:cursor-not-allowed disabled:opacity-50; }
+.btn-secondary { @apply inline-flex items-center justify-center rounded-full border border-birch/20 px-6 py-3 text-sm font-semibold text-bone transition hover:border-forge hover:text-forge disabled:cursor-not-allowed disabled:opacity-50; }
+.card-dark { @apply rounded-3xl border border-white/10 bg-white/[.04] shadow-blade backdrop-blur; }
+.input-dark { @apply w-full rounded-2xl border border-white/10 bg-white/[.06] px-4 py-3 text-bone outline-none transition placeholder:text-steel-dark focus:border-forge; }
