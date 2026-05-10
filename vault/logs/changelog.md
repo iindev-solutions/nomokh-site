@@ -54,3 +54,10 @@ Use compact entries:
 - Changed: Added `/offer`, footer link, deploy docs, smoke checklist, extra payment/secret regression tests.
 - Verified: `pnpm test` 12 pass, `pnpm typecheck`, `pnpm audit --audit-level low`, Prisma validate, `pnpm build` pass.
 - Next: Run DB-backed smoke with real Postgres/Redis; replace legal templates.
+
+## 2026-05-10 — Brand UI Pass
+
+- Changed: Applied NOMOKH premium dark tokens, hero/card/PDP/checkout trust copy, reduced-motion guard, brand contract test.
+- Verified: `corepack pnpm test` 14 pass, `corepack pnpm typecheck`, `corepack pnpm build` pass.
+- Found: `package.json` says Nuxt `^4.4.4`; lock/build use Nuxt `3.19.0`.
+- Next: Resolve Nuxt version drift; DB-backed smoke.

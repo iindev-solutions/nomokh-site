@@ -5,7 +5,7 @@ onMounted(() => { cart.hydrate(); auth.hydrate() })
 const nav = [
   { label: 'Каталог', to: '/catalog/yakutskie-nozhi' },
   { label: 'Аукцион', to: '/auction' },
-  { label: 'Доставка', to: '/#delivery' }
+  { label: 'Сервис', to: '/#delivery' }
 ]
 </script>
 
@@ -13,10 +13,10 @@ const nav = [
   <header class="sticky top-0 z-40 border-b border-white/10 bg-obsidian/80 backdrop-blur-xl">
     <div class="container-page flex h-20 items-center justify-between">
       <NuxtLink to="/" class="flex items-center gap-3">
-        <span class="grid h-10 w-10 place-items-center rounded-full border border-forge/50 bg-forge/10 text-forge">N</span>
+        <span class="grid h-10 w-10 place-items-center rounded-full border border-brass/50 bg-brass/10 text-brass">N</span>
         <span>
           <span class="block text-lg font-semibold tracking-[0.24em]">NOMOKH</span>
-          <span class="block text-xs text-steel">якутские ножи</span>
+          <span class="block text-xs text-steel">легенды севера</span>
         </span>
       </NuxtLink>
       <nav class="hidden items-center gap-8 md:flex">

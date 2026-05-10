@@ -3,7 +3,7 @@
     <div class="container-page grid gap-8 md:grid-cols-3">
       <div>
         <p class="text-lg font-semibold tracking-[0.24em]">NOMOKH</p>
-        <p class="mt-3 max-w-sm text-sm leading-6 text-steel">Премиальная витрина якутских ножей. Каждый клинок — отдельная легенда.</p>
+        <p class="mt-3 max-w-sm text-sm leading-6 text-steel">Премиальный дом якутских ножей и северных вещей. Каждый предмет — материал, мастер и легенда.</p>
       </div>
       <div class="text-sm text-steel">
         <p class="font-semibold text-bone">Покупателю</p>

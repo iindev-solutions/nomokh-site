@@ -24,8 +24,8 @@ watch(() => catalog.page, () => refresh())
 <template>
   <section class="container-page py-12">
     <div class="mb-10">
-      <p class="text-sm uppercase tracking-[0.28em] text-forge">Каталог</p>
-      <h1 class="mt-3 text-5xl font-semibold">{{ category?.name || 'Ножи NOMOKH' }}</h1>
+      <p class="text-sm uppercase tracking-[0.28em] text-brass">Каталог</p>
+      <h1 class="mt-3 font-display text-5xl text-bone">{{ category?.name || 'Ножи NOMOKH' }}</h1>
       <p class="mt-4 max-w-3xl text-steel">{{ category?.description || 'Фильтруйте по стали, рукояти, цене и назначению.' }}</p>
     </div>
     <div class="grid gap-8 lg:grid-cols-[18rem_1fr]">

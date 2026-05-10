@@ -36,8 +36,8 @@ export default defineNuxtConfig({
     head: {
       title: 'NOMOKH — якутские ножи с легендой',
       meta: [
-        { name: 'description', content: 'Премиальная витрина якутских ножей, клинков и аксессуаров.' },
-        { name: 'theme-color', content: '#0B0B0C' }
+        { name: 'description', content: 'Премиальный каталог якутских ножей, украшений и северных ремесленных изделий с историей, упаковкой и проверкой подлинности.' },
+        { name: 'theme-color', content: '#0B0D10' }
       ]
     }
   }

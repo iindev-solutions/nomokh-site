@@ -4,9 +4,9 @@
       <NuxtLink to="/" class="text-xl font-bold tracking-wider">
         NOMOKH
       </NuxtLink>
-      <nav class="flex items-center gap-6 text-sm font-medium text-steel-300">
-        <NuxtLink to="/" class="hover:text-white transition-colors">Главная</NuxtLink>
-        <NuxtLink to="/catalog/all" class="hover:text-white transition-colors">Каталог</NuxtLink>
+      <nav class="flex items-center gap-6 text-sm font-medium text-steel">
+        <NuxtLink to="/" class="transition-colors hover:text-bone">Главная</NuxtLink>
+        <NuxtLink to="/catalog/yakutskie-nozhi" class="transition-colors hover:text-bone">Каталог</NuxtLink>
       </nav>
     </div>
   </header>
