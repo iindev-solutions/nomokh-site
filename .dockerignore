@@ -1,9 +1,0 @@
-node_modules
-.output
-.nuxt
-.git
-.env
-*.log
-.DS_Store
-coverage
-playwright-report
