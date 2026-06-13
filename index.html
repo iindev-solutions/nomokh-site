@@ -1,13 +1,316 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>НОМОХ — Якутские изделия</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
+<header class="header" id="mainHeader">
+  <div class="l-wrapper">
+  	<div class="header__inner">
+    <button class="header__burger" id="burgerBtn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header__actions">
+      <button class="header__icon" aria-label="Избранное">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="header__badge">3</span>
+      </button>
+      <button class="header__icon" aria-label="Корзина">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="header__badge header__badge--orange">4</span>
+      </button>
+    </div>
+  </div>
+  <div class="header__overlay" id="mainNav">
+
+    <nav class="header__nav">
+      <a href="#about">О нас</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header__contacts">
+      <a href="tel:+79244640888" class="header__phone">8 (924) 464-08-88</a>
+      <p class="header__address">Лермонтова 62/2г, Якутск</p>
+      <a href="https://wa.me/+79244640888" target="_blank" rel="noreferrer" class="header__whatsapp">wa.me/+79244640888</a>
+    </div>
+  </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="l-wrapper">
+    <div class="hero__container">
+    <div class="hero__content shadow-left shadow--dark">
+      <div class="hero__brand">
+        <img src="public/logo-nomokh.jpg" alt="НОМОХ" class="hero__logo" />
+        <p class="hero__brand-sub">НОМОХ</p>
+      </div>
+      <h1 class="hero__title" data-anim="hero-text">
+        Якутские ножи<br />
+        ручной работы
+      </h1>
+      <p class="hero__desc" data-anim="hero-text">
+        Ножи, одежда и украшения. Доставка по всей России.
+      </p>
+      <a href="#catalog" class="hero__btn" data-anim="hero-text">
+        Перейти в каталог
+      </a>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__image-wrap" data-anim="hero-visual">
+        <img src="public/img/hero-bg.png" alt="Якутские ножи" class="hero__image" />
+      </div>
+      <div class="hero__card-wrap">
+        <div class="hero__card shadow-right shadow--orange">
+          <div class="hero__card-text">
+            <h3 class="hero__card-title">Нож из якутской стали Н003</h3>
+            <p class="hero__card-meta">
+              Твердость клинка, HRC: 62-64<br />
+              Ножны (чехол): кожа
+            </p>
+          </div>
+          <button class="hero__card-arrow" aria-label="Подробнее">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="l-wrapper">
+    <div class="about__inner">
+    <div class="about__text">
+      <h2 class="about__heading">
+        НОМОХ магазин якутских изделий ручной работы
+      </h2>
+      <p class="about__paragraph">
+        Якутские ножи, термопосуда, одежда и украшения. Всё, что создаётся в Якутии с душой и традициями.
+      </p>
+      <p class="about__paragraph">
+        Доставка и отправка в любую точку мира. Приходите к нам по адресу Лермонтова 62/2г, Якутск.
+      </p>
+    </div>
+    <div class="about__slider glide" id="aboutSlider">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <img src="https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&q=80&w=1000" alt="Булатная сталь" loading="lazy" />
+          </li>
+          <li class="glide__slide">
+            <img src="https://images.unsplash.com/photo-1584670747417-594a9412fba5?auto=format&fit=crop&q=80&w=1000" alt="Якутские ножи" loading="lazy" />
+          </li>
+          <li class="glide__slide">
+            <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&q=80&w=1000" alt="Нож из булатной стали" loading="lazy" />
+          </li>
+        </ul>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="features__inner">
+    <div class="l-wrapper">
+      <div class="features__grid shadow-left shadow-right shadow--gray">
+        <h2 class="features__title">Уникальность нашей продукции:</h2>
+        <div class="features__cards">
+          <div class="features__card features__card--accent">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            <h4>Традиционные ремесленные техники</h4>
+          </div>
+          <div class="features__card">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            <h4>Качество материалов</h4>
+          </div>
+          <div class="features__card">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <h4>Авторский дизайн</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="catalog">
+  <div class="l-wrapper">
+    <div class="catalog__inner">
+        <div class="features__cards">
+	        <div class="catalog__header" >
+		      <h2 class="catalog__title">Наш каталог</h2>
+		    </div>
+          <div class="features__card" style="opacity: 0;">
+            <h4>Качество материалов</h4>
+          </div>
+          <div class="features__card" style="opacity: 0;">
+            <h4>Авторский дизайн</h4>
+          </div>
+        </div>
+
+      <div class="catalog__grid">
+        <a href="#" class="catalog__card">
+          <img src="https://images.unsplash.com/photo-1584670747417-594a9412fba5?auto=format&amp;fit=crop&amp;q=80" alt="Ножи" class="catalog__card-img" loading="lazy" />
+          <div class="catalog__card-overlay">
+            <h3>Ножи сувенирные и практичные</h3>
+            <p>В арсенале любого мужчины — охотника, рыбака или туриста.</p>
+            <span class="catalog__card-line"></span>
+          </div>
+        </a>
+        <a href="#" class="catalog__card">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;q=80" alt="Термопосуда" class="catalog__card-img" loading="lazy" />
+          <div class="catalog__card-overlay catalog__card-overlay--light">
+            <h3>Термопосуда<br />цена = качество</h3>
+            <p>Надёжная посуда — незаменимый атрибут для долгих походов.</p>
+            <span class="catalog__card-line"></span>
+          </div>
+        </a>
+        <a href="#" class="catalog__card">
+          <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&amp;fit=crop&amp;q=80" alt="Якутская одежда" class="catalog__card-img" loading="lazy" />
+          <div class="catalog__card-overlay catalog__card-overlay--light">
+            <h3>Якутская одежда</h3>
+            <p>На каждый день и праздники. Утеплённая и стильная.</p>
+            <span class="catalog__card-line"></span>
+          </div>
+        </a>
+        <a href="#" class="catalog__card">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&amp;fit=crop&amp;q=80" alt="Украшения" class="catalog__card-img" loading="lazy" />
+          <div class="catalog__card-overlay">
+            <h3>Якутские украшения</h3>
+            <p>Ручная работа, бусины, дэйбиир — традиция в каждой детали.</p>
+            <span class="catalog__card-line"></span>
+          </div>
+        </a>
+      </div>
+
+      <section class="cta">
+    <div class="cta__inner">
+      <div class="cta__content">
+        <h2 class="cta__title">Хотите эксклюзивное изделие?</h2>
+        <p class="cta__desc">Напишите нам, и мы разработаем дизайн специально для вас.</p>
+      </div>
+      <a href="#contacts" class="cta__btn">Написать</a>
+    </div>
+</section>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="services">
+		<div class="l-wrapper">
+    <div class="services__inner">
+    <div class="services__header">
+    	<div class="shadow-left shadow--orange">
+      	<h2 class="services__title">Дополнительные услуги</h2>
+    	</div>
+      <div class="services__feature shadow-left shadow--dark"></div>
+    </div>
+    <div class="services__list">
+      <div class="services__item shadow-right">
+        <div class="services__item-text">
+          Гравировка на ножах и изделиях
+        </div>
+        <div class="services__item-img" style="background-image: url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&q=80')"></div>
+      </div>
+      <div class="services__item shadow-right">
+        <div class="services__item-text">
+          Заточка ножей
+        </div>
+        <div class="services__item-img" style="background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&q=80')"></div>
+      </div>
+      <div class="services__item shadow-right">
+        <div class="services__item-text">
+          Коврики от Gelixmax
+        </div>
+        <div class="services__item-img" style="background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80')"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="l-wrapper contacts__inner">
+    <div class="contacts__form">
+      <h2 class="contacts__form-title">Хотите эксклюзивное изделие?</h2>
+      <p class="contacts__form-desc">Оставьте заявку — мы перезвоним через 5 минут!</p>
+      <form class="contacts__form-body" id="contactForm">
+        <input type="text" placeholder="Ваше имя" required />
+        <input type="tel" placeholder="Ваш телефон" required />
+        <label class="contacts__checkbox">
+          <input type="checkbox" required />
+          <span>Согласен на обработку <a href="#">персональных данных</a></span>
+        </label>
+        <button type="submit">Оставить заявку</button>
+      </form>
+    </div>
+    <div class="contacts__map shadow-right">
+      <iframe src="https://yandex.ru/map-widget/v1/?ll=129.715367%2C62.030588&z=15" class="contacts__map-iframe" allowfullscreen loading="lazy" title="Карта"></iframe>
+      <div class="contacts__map-address">
+        <span class="contacts__map-pin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#EF7E31" stroke="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="white"/></svg>
+          Лермонтова 62/2г
+        </span>
+        <p class="contacts__map-detail">
+          Якутск, Россия, 677000<br />
+          Магазин якутских изделий
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-wrapper footer__inner">
+    <div class="footer__left shadow-left">
+      <a href="https://wa.me/+79244640888" target="_blank" rel="noreferrer" class="footer__phone">8 (924) 464-08-88</a>
+      <nav class="footer__nav">
+        <a href="#about">О нас</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a href="#" class="footer__policy">Политика конфиденциальности</a>
+    </div>
+    <div class="footer__right shadow-right">
+      <div class="footer__social">
+        <a href="#" class="footer__social-icon" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://wa.me/+79244640888" target="_blank" rel="noreferrer" class="footer__social-icon" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+        <a href="#" class="footer__social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+      <a href="https://iindev.xyz" target="_blank" rel="noreferrer" class="footer__credit">Разработка сайтов <span class="footer__brand-iin">iin</span><span class="footer__brand-dev">dev</span></a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
