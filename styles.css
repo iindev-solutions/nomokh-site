@@ -332,12 +332,25 @@ main {
 }
 
 .hero__visual {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 80px 0 80px 16px;
-	background: #f5f5f5;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0 80px 16px;
+  background: #F5F5F5;
+}
+
+.hero__visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('public/logo-nomokh.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.06;
+  filter: blur(1px);
+  pointer-events: none;
 }
 
 .hero__image-wrap {
