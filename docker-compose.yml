@@ -1,0 +1,30 @@
+services:
+  nuxt:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NUXT_PUBLIC_POCKETBASE_URL=http://pocketbase:8090
+    depends_on:
+      - pocketbase
+    restart: unless-stopped
+
+  pocketbase:
+    image: pocketbase/pocketbase:latest
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./data/pb_data:/pb/pb_data
+      - ./data/pb_public:/pb/pb_public
+    restart: unless-stopped
+
+  plausible:
+    image: ghcr.io/plausible/community-edition:v2.0
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///var/lib/plausible/db.sqlite
+      - BASE_URL=http://localhost:8000
+    volumes:
+      - ./data/plausible:/var/lib/plausible
+    restart: unless-stopped
