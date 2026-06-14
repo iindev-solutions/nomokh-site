@@ -18,14 +18,14 @@ services:
       - ./data/pb_public:/pb/pb_public
     restart: unless-stopped
 
-  plausible:
-    image: plausible/community-edition:v2.1
-    ports:
-      - "8000:8000"
-    environment:
-      - DATABASE_URL=sqlite:///var/lib/plausible/db.sqlite
-      - BASE_URL=http://localhost:8000
-      - SECRET_KEY_BASE=2JWgTZBUV7AK63/FRZnfhGrmE7BrgLPk6Dn8VWJVaGHSzw3Pv540jPC1bl4Q2vZH
-    volumes:
-      - ./data/plausible:/var/lib/plausible
-    restart: unless-stopped
+  # plausible:
+  #   image: plausible/community-edition:v2.1
+  #   ports:
+  #     - "8000:8000"
+  #   environment:
+  #     - DATABASE_URL=sqlite:///var/lib/plausible/db.sqlite
+  #     - BASE_URL=http://localhost:8000
+  #     - SECRET_KEY_BASE=2JWgTZBUV7AK63/FRZnfhGrmE7BrgLPk6Dn8VWJVaGHSzw3Pv540jPC1bl4Q2vZH
+  #   volumes:
+  #     - ./data/plausible:/var/lib/plausible
+  #   restart: unless-stopped
