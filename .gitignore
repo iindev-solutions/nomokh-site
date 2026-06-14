@@ -6,3 +6,12 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Nuxt
+.nuxt/
+.output/
+frontend/.nuxt/
+frontend/.output/
+
+# PocketBase
+data/

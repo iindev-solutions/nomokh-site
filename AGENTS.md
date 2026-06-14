@@ -1,76 +1,62 @@
 # Agent Notes
 
-## Project
+## Repo: Two subprojects
 
-Vanilla HTML + CSS + JS landing page for Nomokh (Yakut goods). No framework, no build step.
+| Project | Dir | Stack |
+|---------|-----|-------|
+| Frontend | `./frontend/` | Nuxt 4.4.8, Vue 3.5, Vue Router 5, TS |
+| Backend | PocketBase (Docker) | SQLite, REST API, Admin Panel |
 
-## Entry
+## Frontend (`./frontend/`)
 
-`index.html` → `styles.css` + `script.js` (GSAP via CDN).
+- **Entry:** `pages/index.vue` → `components/App*.vue`
+- **Dev:** `npm run dev` from `frontend/` directory (port 3000)
+- **Build:** `npm run build`, **Generate:** `npm run generate`, **Preview:** `npm run preview`
+- **All styles** in single file: `assets/css/main.css` (~1266 lines) — no modules, no Tailwind
+- GSAP + Glide.js loaded via CDN in `nuxt.config.ts` `app.head.script`
+- TypeScript enabled via `tsconfig.json` (extends `./.nuxt/tsconfig.json`)
+- Auto-generated `.nuxt/` (gitignored) — regen with `npx nuxt prepare`
 
-## Dev
+## Backend (PocketBase)
 
-- `npm run dev` — serves root via `npx serve`
-- Or open `index.html` directly / use VS Code Live Server
-- No lint, typecheck, or build step
+- **Docker:** `docker compose up -d`
+- **Admin:** `http://localhost:8090/_/`
+- **API:** `http://localhost:8090/api/`
+- **Database:** SQLite at `./data/pb_data/`
 
-## Layout
+## Shared design conventions
 
-- Container: `.l-wrapper` — `max-width: 1440px; padding: 0 16px; margin: 0 auto`
-- Inter font via Google Fonts CDN in `<head>`
-- GSAP 3 + ScrollTrigger via CDN
+- **Container:** `.l-wrapper` — `max-width: 1440px; padding: 0 16px; margin: 0 auto`
+- **Font:** Inter from Google Fonts CDN in `<head>`
+- **Design tokens** (CSS custom properties):
 
-## Full-bleed utility classes
+  | Token | Value |
+  |-------|-------|
+  | `--color-orange` | `#EF7E31` |
+  | `--color-dark` | `#2E2F31` |
+  | `--color-gray` | `#A8A8A8` |
+  | `--color-light` | `#E4E4E4` |
 
-Use on an element inside a section with `overflow: hidden` to extend its color to the viewport edge:
+- **Animations:** GSAP 3 + ScrollTrigger via CDN; all sections use `[data-anim]` with opacity/translateY fade-in
 
-| Class | Effect |
-|-------|--------|
-| `.shadow-left` | left bleed, inherits element background |
-| `.shadow-right` | right bleed, inherits element background |
-| `.shadow--orange` | set bleed color to lighter orange `#f5a070` |
-| `.shadow--gray` | set bleed color to `#A8A8A8` |
-| `.shadow--dark` | set bleed color to `#333` |
-| `.border-left` | left border |
-| `.border-right` | right border |
-| `.border--gray` | border color `#A8A8A8` |
-| `.border--orange` | border color `#EF7E31` |
-| `.border--dark` | border color `#2E2F31` |
+## Sections (in order)
 
-Combine direction + color, e.g. `.shadow-left.shadow--dark`, `.shadow-right.shadow--gray`, or `.border-left.border--gray`.
-
-## Design Tokens (CSS custom properties in `:root`)
-
-| Token | Value |
-|-------|-------|
-| `--color-orange` | `#EF7E31` |
-| `--color-dark` | `#2E2F31` |
-| `--color-gray` | `#A8A8A8` |
-| `--color-light` | `#E4E4E4` |
-
-## Structure
-
-Single-page sections in order:
-1. Header (fixed)
-2. Hero (full viewport)
-3. About
-4. Features
-5. Catalog
-6. Services
+1. Header (fixed, transparent → dark on scroll, burger overlay menu)
+2. Hero (full viewport, split dark/orange halves)
+3. About (2-col grid, Glide.js slider on right)
+4. Features (dark bg, 3 cards)
+5. Catalog (orange header, 2-col image grid)
+6. Services (orange header, 3-row list with images)
 7. Contacts (form + Yandex map)
-8. Footer
+8. Footer (split dark/light halves, no divider)
 
-## Animations (script.js)
+## Contacts & Social
 
-- Hero entrance: text fade-up + visual slide-in
-- Scroll-triggered section fade-ins via ScrollTrigger
-- Header hide/show on scroll direction
-- Mobile burger menu
-- Smooth scroll for anchor links
+- **Phone:** `8 (924) 464-08-88` — links to WhatsApp `wa.me/+79244640888`
+- **Social:** YouTube, WhatsApp, Instagram (in footer right half)
 
-## Notes
+## Gotchas
 
-- Images are Unsplash placeholders; user replaces later.
-- All text is Russian (mix of reference and original).
-- Phone: `8 (924) 464-08-88`, WhatsApp: `wa.me/+79244640888`.
-- No external deps except GSAP CDN and Google Fonts.
+- `.l-wrapper` should never carry utility classes (golden rule)
+- Shadow pseudo-elements use `width: 100vw` with `position: absolute` — the parent section must have `overflow: hidden`
+- Burger overlay needs `pointer-events: none` when closed, `pointer-events: auto` when open
