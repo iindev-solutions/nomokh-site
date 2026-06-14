@@ -19,7 +19,7 @@ services:
     restart: unless-stopped
 
   plausible:
-    image: ghcr.io/plausible/community-edition:v2.0
+    image: plausible/community-edition:v2.1
     ports:
       - "8000:8000"
     environment:
