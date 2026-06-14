@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
 
   pocketbase:
-    image: pocketbase/pocketbase:latest
+    image: elestio/pocketbase:latest
     ports:
       - "8090:8090"
     volumes:
