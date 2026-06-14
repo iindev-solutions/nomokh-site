@@ -25,6 +25,7 @@ services:
     environment:
       - DATABASE_URL=sqlite:///var/lib/plausible/db.sqlite
       - BASE_URL=http://localhost:8000
+      - SECRET_KEY_BASE=2JWgTZBUV7AK63/FRZnfhGrmE7BrgLPk6Dn8VWJVaGHSzw3Pv540jPC1bl4Q2vZH
     volumes:
       - ./data/plausible:/var/lib/plausible
     restart: unless-stopped
